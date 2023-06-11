@@ -32,7 +32,7 @@
                                         <button class="btn btn-danger btn-sm"
                                             onclick="event.preventDefault(); document.getElementById('delete-portofolio-{{ $item->id }}').submit()">Delete</button>
 
-                                        <form id="delete-project-{{ $item->id }}"
+                                        <form id="delete-portofolio-{{ $item->id }}"
                                             action="{{ route('portofolio.destroy', $item->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')

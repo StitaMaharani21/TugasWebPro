@@ -26,7 +26,7 @@
                                         <button class="btn btn-danger btn-sm"
                                             onclick="event.preventDefault(); document.getElementById('delete-category-{{ $item->id }}').submit()">Delete</button>
 
-                                        <form id="delete-project-{{ $item->id }}"
+                                        <form id="delete-category-{{ $item->id }}"
                                             action="{{ route('category.destroy', $item->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
