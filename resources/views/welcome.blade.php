@@ -68,7 +68,7 @@
 
         <!-- ======= Portfolio Section ======= -->
         <section id="portfolio" class="portfolio section-bg">
-            {{-- <div class="container">
+            <div class="container">
 
                 <div class="section-title">
                     <h2>Project</h2>
@@ -78,25 +78,24 @@
                 <table class="table align-middle table-bordered"
                     style="width: 100%; margin-top: 10px; text-align: center; vertical-align: middle">
                     <thead>
-                        <tr>
-                            <th>No</th>
-                            <th>Project Title</th>
-                            <th>Project Description</th>
-                            <th>Image Project</th>
+                        <th>No</th>
+                        <th>Category</th>
+                        <th>Portofolio Title</th>
+                        <th>Portofolio Description</th>
+                        <th>Image Portofolio</th>
                         </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($project as $index => $item)
+                        @foreach ($portofolio as $index => $item)
                             <tr>
                                 <td>{{ $index + 1 }}</td>
+                                <td>{{ $item->category->type }}</td>
                                 <td>{{ $item->title }}</td>
                                 <td>{{ $item->description }}</td>
                                 <td><img src="{{ asset($item->image_url) }}" style="width: 200px; height: 100px"></td>
                             </tr>
                         @endforeach
-                    </tbody>
+                        </tbody>
                 </table>
-            </div> --}}
+            </div>
         </section><!-- End Portfolio Section -->
 
         <!-- ======= Contact Section ======= -->

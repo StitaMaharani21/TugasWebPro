@@ -15,8 +15,9 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $portofolio = \App\Models\Portofolio::all();
+    return view('welcome', compact('portofolio'));
+})->name('welcome');
 
 Auth::routes();
 
