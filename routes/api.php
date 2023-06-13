@@ -27,7 +27,7 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('refresh', 'refresh');
 });
 
-Route::get('portfolios', [ApiController::class, 'index']);
-Route::post('portfolios', [ApiController::class, 'store']);
-Route::put('portfolios/{id}', [ApiController::class, 'update']);
-Route::delete('portfolios/{id}', [ApiController::class, 'destroy']);
+Route::get('portofolio', [ApiController::class, 'index']);
+Route::post('portofolio', [ApiController::class, 'store']);
+Route::put('portofolio/{id}', [ApiController::class, 'update']);
+Route::delete('portofolio/{id}', [ApiController::class, 'destroy']);
