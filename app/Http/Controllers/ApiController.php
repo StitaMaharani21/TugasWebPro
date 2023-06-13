@@ -82,7 +82,11 @@ class ApiController extends Controller
 
         $portofolio = Portofolio::findOrFail($id);
         Storage::delete('uploads/' . $portofolio->image_url);
-        $portofolio->category_id = $request->category;
+        // $portofolio->category_id = $request->category;
+        if ($request->has('category')) {
+            $portofolio->category_id = $request->category;
+        }
+
         $portofolio->title = $request->title;
         $portofolio->description = $request->description;
         $portofolio->image_url = '/storage/' . $imagePath;
@@ -101,6 +105,4 @@ class ApiController extends Controller
 
         return response('delete portfolio success');
     }
-
-    
 }

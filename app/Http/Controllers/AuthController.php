@@ -88,8 +88,4 @@ class AuthController extends Controller
             ]
         ]);
     }
-    public function test()
-    {
-        return "TITAAA CAYAGGG";
-    }
 }

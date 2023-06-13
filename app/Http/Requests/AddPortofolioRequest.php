@@ -23,7 +23,7 @@ class AddPortofolioRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'category_id' => 'required',
+            // 'category_id' => 'required',
             'description' => 'required',
             'image_url' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
